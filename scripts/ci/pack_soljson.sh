@@ -11,7 +11,7 @@ output="$3"
 
 # If this changes in an emscripten update, it's probably nothing to worry about,
 # but we should double-check when it happens and adjust the tail command below.
-[[ $(head -c 5 "${soljson_js}") == "null;" ]] || { >&2 echo 'Expected soljson.js to start with "null;"'; exit 1; }
+[[ $(head -c 13 "${soljson_js}") == '"use strict";' ]] || { >&2 echo 'Expected soljson.js to start with "use strict";'; exit 1; }
 
 echo "Packing $soljson_js and $soljson_wasm to $output."
 (
@@ -28,7 +28,7 @@ echo "Packing $soljson_js and $soljson_wasm to $output."
     echo '",'
     echo -n "${soljson_wasm_size});"
     # Remove "null;" from the js wrapper.
-    tail -c +6 "${soljson_js}"
+    tail -c +14 "${soljson_js}"
 ) > "$output"
 
 echo "Testing $output."
