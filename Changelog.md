@@ -10,7 +10,7 @@ Bugfixes:
 * Parser: Fix inverted version pragma range comparison for components in the range [2**31, 2**32).
 
 Build System:
-* Update emscripten to version 3.1.23.
+* Update emscripten to version 3.1.24.
 
 
 ### 0.8.37 (2026-09-10)

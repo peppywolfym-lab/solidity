@@ -30,8 +30,8 @@ parameters:
   emscripten-docker-image:
     type: string
     # NOTE: Please remember to update the `scripts/build_emscripten.sh` whenever the hash of this image changes.
-    # ghcr.io/argotorg/solidity-buildpack-deps:emscripten-23
-    default: "ghcr.io/argotorg/solidity-buildpack-deps@sha256:a1fb35750684c4e47ea515b0e791cea1b20f4cc48fbd114de6261be13e23e152"
+    # ghcr.io/argotorg/solidity-buildpack-deps:emscripten-24
+    default: "ghcr.io/argotorg/solidity-buildpack-deps@sha256:a1601b11dee7dbcee76d9a26f92d350f133c618b340fcb2f60cbd3b0e50ff8ba"
   evm-version:
     type: string
     default: osaka
